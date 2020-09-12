@@ -1,0 +1,1 @@
+setup blog site using django

@@ -56,6 +56,12 @@ class TestViews(TestCase):
 
     def test_post_create_view(self):
         response = self.client.get(reverse('post-create'))
-        self.assertEquals(response.status_code, 200)
-        self.assertContains(response, 'testtitle')
-        self.assertTemplateUsed(response, 'blog/post_form.html')
+        self.assertEquals(response.status_code, 302)
+
+    def test_post_update_view(self):
+        response = self.client.get(reverse('post-update', kwargs={'pk': 1}))
+        self.assertEquals(response.status_code, 302)
+
+    def test_post_delete_view(self):
+        response = self.client.get(reverse('post-delete', kwargs={'pk': 1}))
+        self.assertEquals(response.status_code, 302)
