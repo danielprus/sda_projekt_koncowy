@@ -5,7 +5,7 @@ from django.utils import timezone
 from ..models import Post
 
 
-class TestModel(TestCase):
+class TestModels(TestCase):
 
     def setUp(self):
         Post.objects.create(

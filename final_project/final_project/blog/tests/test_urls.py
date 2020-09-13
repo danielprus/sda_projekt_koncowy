@@ -16,10 +16,6 @@ from ..views import (
 
 class TestUrls(SimpleTestCase):
     
-    def test_blog_home_url(self):
-        url = reverse('blog-home')
-        self.assertEquals(resolve(url).func, {'posts': Post.objects.all()})
-
     def test_post_list_view(self):
         url = reverse('blog-home')
         self.assertEquals(resolve(url).func.view_class, PostListView)

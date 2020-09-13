@@ -4,16 +4,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 from ..models import Post
-from ..views import (
-    PostListView,
-    PostDetailView,
-    PostCreateView,
-    PostUpdateView,
-    PostDeleteView,
-    UserPostListView,
-    about,
-    home
-)
+from ..views import PostCreateView
 
 
 class TestViews(TestCase):
